@@ -29,8 +29,8 @@ function generatePassword(inputs) {
 
     listAll += (complexity.upper) ? listUpper : "";
     listAll += (complexity.lower) ? listLower : "";
-    listAll += (complexity.Num) ? listNum : "";
-    listAll += (complexity.Sym) ? listSym : "";
+    listAll += (complexity.number) ? listNum : "";
+    listAll += (complexity.symbol) ? listSym : "";
 
     for (var i = 0; i < length; i++) {
         var k = Math.floor(Math.random() * listAll.length);
