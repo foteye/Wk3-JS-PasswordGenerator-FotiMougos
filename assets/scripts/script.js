@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
     var inputs = gatherInputs();
-    if (!inputs){
+    if (! inputs) {
         alert('Error: Please select at least one type of character to generate the password with');
         return;
     }
@@ -16,7 +16,7 @@ function writePassword() {
 function gatherInputs() {
     var length = validateLength(prompt("Please enter a password length, between 8 - 128. (Default 8)"));
     var complexity = validateComplexity();
-    if (!complexity){
+    if (! complexity) {
         return false;
     }
 
@@ -33,7 +33,7 @@ function generatePassword(inputs) {
     var complexity = inputs.complexity;
     var password = "";
 
-    //Add selected complexities to list
+    // Add selected complexities to list
     listAll += (complexity.upper) ? listUpper : "";
     listAll += (complexity.lower) ? listLower : "";
     listAll += (complexity.number) ? listNum : "";
@@ -64,27 +64,32 @@ function validateComplexity() {
     complexity.number = (confirm('I would like to include numbers:')) ? true : false;
     complexity.symbol = (confirm('I would like to include symbols:')) ? true : false;
 
-    //Test each complexity value - if at least one is found to be true, input is validated & return early
-    for (key in complexity){
-        if (complexity[key] == true){
+    // Test each complexity value - if at least one is found to be true, input is validated & return early
+    for (key in complexity) {
+        if (complexity[key] == true) {
             inputsValidated = true;
-            break; //break early
+            break; // break early
         }
     }
 
-    if (inputsValidated){
+    if (inputsValidated) {
         return complexity;
     } else {
         return false;
     }
-    
+
 }
 
 function validateLength(length) {
-    if (Number.isNaN(length)) { // Not a number
-        return false;
-    } else if (!(length >= 8 && length <= 128)) { // Outside bounds, return default
-        return "8";
+    if (!Number.isNaN(length)) { // Not a number
+        alert("Invalid input: '" + length + "' - Defaulting to 8");
+        return 8;
+    } else if (length < 8) {
+        alert("Number too small: '" + length + "' - Increasing to 8");
+        return 8;
+    } else if (length > 128) { // Outside bounds, return default
+        alert("Number too large: '" + length + "' - Decreasing to 128");
+        return 128;
     } else {
         return length;
     }
