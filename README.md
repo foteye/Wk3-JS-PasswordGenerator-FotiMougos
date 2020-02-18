@@ -1,7 +1,7 @@
 # Code-Refactor
 Homework Week 3 - Password Generator<br>
 Author: Foti Mougos<br>
-Deployed At:
+[Deployed At Github](https://foteye.github.io/Wk3-JS-PasswordGenerator-FotiMougos/ "Deployed at Github")
 
 ### Brief:
 The customer would like a secure password to be generated when a 'Generate Password' button is clicked. They would like to be prompted for input criteria (as opposed to using a defined standard or ... y'know, form). These criteria include:
