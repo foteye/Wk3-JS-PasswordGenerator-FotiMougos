@@ -1,4 +1,4 @@
-# Code-Refactor
+# Password Generator
 Homework Week 3 - Password Generator<br>
 Author: Foti Mougos<br>
 [Deployed At Github](https://foteye.github.io/Wk3-JS-PasswordGenerator-FotiMougos/ "Deployed at Github")
@@ -18,7 +18,7 @@ Some wise words: "First, solve the problem. Then, write the code."
 
 ### Website Demo
 Click the "Generate Password" button, you will be asked a series of questions, password length and which characters you would like to include. This program supports uppercase & lowercase letters, numbers and common symbols.<br>
-![alt text](assets/demo/SiteDemo.png "Logo Title Text 1")
+![Site Demo](assets/demo/SiteDemo.png "Site Demo")
 
 ### Lessons Learned:
 
